@@ -5,17 +5,13 @@
 ---
 ### Questão 1
 ```m
-% Definindo o intervalo de x
 x = -1:0.01:3;
 
-% Calculando as funções u e v
 u = log(60*x + 1);
 v = 3*sin(6*x);
 
-% Plotando as funções em uma única figura
 figure;
 
-% Plotando a função u
 subplot(2,1,1);
 plot(x, u, 'b', 'LineWidth', 2);
 xlabel('x (milhas)');
@@ -23,7 +19,6 @@ ylabel('u (milhas por hora)');
 title('Gráfico da função u = ln(60x+1)');
 grid on;
 
-% Plotando a função v
 subplot(2,1,2);
 plot(x, v, 'r', 'LineWidth', 2);
 xlabel('x (milhas)');
@@ -31,7 +26,6 @@ ylabel('v (milhas por hora)');
 title('Gráfico da função v = 3sen(6x)');
 grid on;
 
-% Ajustando o espaçamento entre os subplots
 spacing = 0.05;
 set(gcf, 'Position', get(0, 'Screensize'));
 set(gcf, 'Units', 'Normalized');
@@ -48,16 +42,44 @@ set(gca, 'OuterPosition', pos2);
 ### Questão 2
 
 ```m
-% Definindo o intervalo de x
 x = 0:0.01:2*pi/4;
 
-% Calculando a função y
 y = exp(-2*x) .* sin(3*x);
 
-% Plotando o gráfico
 plot(x, y, 'b', 'LineWidth', 2);
 xlabel('x');
 ylabel('y');
 title('Gráfico da função y = e^{-2x} \cdot sin(3x)');
 grid on;
 ```
+
+---
+
+### Questão 3
+
+```m
+x1 = linspace(-5, 15, 250);
+y1 = 3*x1.^3 + 3*x1.^2 - 4*x1 + 10;
+
+figure;
+plot(x1, y1, 'b', 'LineWidth', 2);
+xlabel('x');
+ylabel('y');
+title('Gráfico da função y = 3x^3 + 3x^2 - 4x + 10');
+grid on;
+
+x2 = linspace(-7, exp(-2), 250);
+y2 = 2*exp(x2/4);
+
+figure;
+plot(x2, y2, 'r', 'LineWidth', 2);
+xlabel('x');
+ylabel('y');
+title('Gráfico da função y = 2e^{(x/4)}');
+grid on;
+```
+
+---
+
+### Questão 4
+
