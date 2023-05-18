@@ -42,3 +42,22 @@ set(gca, 'Position', pos1);
 set(gca, 'Units', 'Normalized');
 set(gca, 'OuterPosition', pos2);
 ```
+
+---
+
+### Questão 2
+
+```m
+% Definindo o intervalo de x
+x = 0:0.01:2*pi/4;
+
+% Calculando a função y
+y = exp(-2*x) .* sin(3*x);
+
+% Plotando o gráfico
+plot(x, y, 'b', 'LineWidth', 2);
+xlabel('x');
+ylabel('y');
+title('Gráfico da função y = e^{-2x} \cdot sin(3x)');
+grid on;
+```
