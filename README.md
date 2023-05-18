@@ -2,6 +2,8 @@
 
 ## Os códigos fornecidos estão na linguagem '.m'
 
+---
+### Questão 1
 ```m
 % Definindo o intervalo de x
 x = -1:0.01:3;
