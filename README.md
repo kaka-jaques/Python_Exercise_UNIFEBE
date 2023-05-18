@@ -147,5 +147,52 @@ grid on;
 ### QUESTÃO 3
 
 ```m
+x = linspace(-1, 3, 1000);
 
+u = log(60*x + 1);
+v = 3*sin(6*x);
+
+figure;
+
+subplot(2,1,1);
+plot(x, u, 'b', 'LineWidth', 2);
+xlabel('x (milhas)');
+ylabel('u (milhas por hora)');
+title('Velocidade u = ln(60x+1)');
+grid on;
+
+subplot(2,1,2);
+plot(x, v, 'r', 'LineWidth', 2);
+xlabel('x (milhas)');
+ylabel('v (milhas por hora)');
+title('Velocidade v = 3sen(6x)');
+grid on;
+
+spacing = 0.05;
+set(gcf, 'Position', get(0, 'Screensize'));
+set(gcf, 'Units', 'Normalized');
+set(gcf, 'OuterPosition', [0 0 1 1]);
+pos1 = get(gca, 'Position');
+pos2 = [pos1(1), pos1(2) + pos1(4) + spacing, pos1(3), pos1(4)];
+set(gca, 'Position', pos1);
+set(gca, 'Units', 'Normalized');
+set(gca, 'OuterPosition', pos2);
+```
+
+---
+
+### QUESTÃO 4
+
+```m
+x = input('Digite um valor para x: ');
+
+if x < -1
+    result = 2 * x - 1;
+elseif -1 <= x && x <= 1
+    result = x^2 + 3 * x;
+else
+    result = exp(x^(2/3));
+end
+
+fprintf('O valor de f(x) é: %.2f\n', result);
 ```
