@@ -96,3 +96,56 @@ end
 
 fprintf('O valor de f(x) é: %.2f\n', result);
 ```
+
+---
+
+# PARTE 2
+
+### QUESTÃO 1
+
+```m
+x = linspace(0, exp(pi), 1000);
+
+y = exp(-x) .* sin(x);
+
+plot(x, y, 'b', 'LineWidth', 2);
+xlabel('x');
+ylabel('y');
+title('Gráfico da função y = e^{-x} \cdot sin(x)');
+grid on;
+```
+
+---
+
+### QUESTÃO 2
+
+```m
+x_a = linspace(-20, 20, 1000);
+y_a = x_a.^3 - 5*x_a.^2 + 2*x_a + 5;
+
+figure;
+plot(x_a, y_a, 'b', 'LineWidth', 2);
+xlabel('x');
+ylabel('y');
+title('Gráfico da função y = x^3 - 5x^2 + 2x + 5');
+grid on;
+
+x_b = linspace(-2*pi, pi, 1000);
+y_b = sin(x_b) .* cos(2*x_b);
+
+figure;
+plot(x_b, y_b, 'r', 'LineWidth', 2);
+xlabel('x');
+ylabel('y');
+title('Gráfico da função y = sin(x) * cos(2x)');
+grid on;
+
+```
+
+---
+
+### QUESTÃO 3
+
+```m
+
+```
