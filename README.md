@@ -83,3 +83,16 @@ grid on;
 
 ### Questão 4
 
+```m
+x = input('Digite um valor para x: ');
+
+if x < -2
+    result = 2 * x^3 - 4 * x;
+elseif -2 <= x && x <= 4
+    result = x^2 + 3 * x;
+else
+    result = cos(x^(2/3));
+end
+
+fprintf('O valor de f(x) é: %.2f\n', result);
+```
